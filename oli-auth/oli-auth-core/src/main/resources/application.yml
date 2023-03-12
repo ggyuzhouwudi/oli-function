@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/auth?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 1
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+  configuration:
+    map-underscore-to-camel-case: true
+    # 二级缓存
+    cache-enabled: false
+    # 字段值为null也返回
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
